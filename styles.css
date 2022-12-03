@@ -9,21 +9,21 @@
     --black : rgb(34, 34, 34);
     --grey : rgb(67, 66, 66);
     --light-grey: rgb(243, 239, 224);
-    --blue: rgb(55,161,184);
+    --red: rgb(218, 0, 55);
 }
 html::-webkit-scrollbar {
-    width: 10px;
-    background-color: transparent;
+    width: 12px;
+    background-color: rgb(0, 0, 0);
 }
 html::-webkit-scrollbar-track {
     border-radius: 8px;
-    margin: 5px 0px;
-    background-color: #e7e7e7;
-    border: 1px solid #cacaca;
+    background-color: black;
+    border: 1px solid rgb(26, 81, 93);
 }
 html::-webkit-scrollbar-thumb {
     border-radius: 8px;
-    background-color: var(--blue);
+    background: rgb(200,28,133);
+    background: linear-gradient(180deg, rgba(34,163,159,1) 0%, rgba(0,160,201,1) 100%);
 }
 a {
     text-decoration: none;
@@ -115,8 +115,8 @@ li {
 .search-bar > input:focus {
     width: 70%;
     border: 2px solid var(--light-grey);
-    border-right: 2px solid var(--blue);
-    border-left: 2px solid var(--blue);
+    border-right: 2px solid var(--red);
+    border-left: 2px solid var(--red);
 }
 .mini-profil > a {
     color: var(--black);
@@ -160,14 +160,14 @@ li {
 .profil-nav > button {
     border-radius: 50px;
     align-self: center;
-    background-color: var(--blue);
+    background-color: var(--red);
     border: none;
     padding: 10px 20px 10px;
     color: white;
     transition: all 0.3s;
 }
 .profil-nav > button:hover {
-    background-color: rgb(48, 138, 158);
+    background-color: rgb(152, 7, 7);
     cursor: pointer;
 }
 .main-content {
@@ -203,10 +203,14 @@ li {
 .project:hover {
     background-color: rgb(255, 255, 255);
 }
+.project:hover .project-text > h4 {
+    color: var(--red);
+}
 .project-text > h4 {
-    color: var(--blue);
+    color: black;
     font-weight: bold;
     margin-bottom: 4px;
+    transition: all 0.2s;
 }
 .project-text > p {
     font-style: italic;
