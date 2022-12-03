@@ -9,7 +9,7 @@
     --black : rgb(34, 34, 34);
     --grey : rgb(67, 66, 66);
     --light-grey: rgb(243, 239, 224);
-    --blue: rgba(34,163,159,1);
+    --blue: rgb(55,161,184);
 }
 a {
     text-decoration: none;
@@ -20,6 +20,8 @@ body {
     width: 100vw;
     display: grid;
     grid-template-columns: 1.2fr 5fr;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 .sidebar {
     background: linear-gradient(90deg, rgba(34,163,159,1) 0%, rgba(0,160,201,1) 100%);
@@ -72,6 +74,8 @@ li {
     justify-content: space-between;
     align-items: center;
     padding: 10px 50px 10px;
+    position: sticky;
+    top: 0px;
 
     background-color: var(--light-grey);
     color: black;
@@ -149,7 +153,7 @@ li {
     transition: all 0.3s;
 }
 .profil-nav > button:hover {
-    background-color: rgb(28, 126, 123);
+    background-color: rgb(48, 138, 158);
     cursor: pointer;
 }
 .main-content {
@@ -173,7 +177,7 @@ li {
 }
 .project {
     display: grid;
-    grid-template-rows: auto 20px;
+    grid-template-rows: auto 30px;
     gap: 5px;
 
     background-color: var(--light-grey);
@@ -185,31 +189,61 @@ li {
 .project:hover {
     background-color: rgb(255, 255, 255);
 }
+.project-text > h4 {
+    color: var(--blue);
+    font-weight: bold;
+    margin-bottom: 4px;
+}
 .project-text > p {
     font-style: italic;
+    font-weight: 100;
     color: var(--grey);
     font-size: 0.9rem;
 }
 .project-menu {
-    justify-self: end;
     display: flex;
-    gap: 10px;
+    justify-self: end;
+    align-items: center;
+}
+.project-menu > img {
+    box-sizing: content-box;
+    padding: 10px;
+    transition: all 0.2s;
+}
+.project-menu > img:hover {
+    border-radius: 50%;
+    background-color: var(--light-grey);
 }
 .anc-section {
     display: grid;
     grid-template-rows: 30px auto;
+    gap: 9px;
 }
 .anc {
     display: grid;
-    grid-template-rows: 1fr 2px 1fr 2px 1fr;
+    grid-template-rows: 1fr 1px 1fr 1px 1fr;
+    gap: 10px;
+    border-radius: 5px;
 
     background-color: var(--light-grey);
     color: black;
-    padding: 10px;
+    padding: 25px;
     margin: 0px 5px 10px;
+}
+.anc > .line {
+    background-color: rgb(181, 181, 181);
 }
 .anc > h3 {
     grid-column: 1/-1;
+}
+.announce > h4 {
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+.announce > p {
+    font-size: 0.8rem;
+    color: var(--grey);
+    font-weight: 100;
 }
 .trending-section {
     display: grid;
