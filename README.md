@@ -1,2 +1,4 @@
-# admin-dashboard
-creating a simple admin dashboard using Grid and Flexbox
+# Admin dashboard
+> Admin Dashboard created using CSS Grid Layout
+
+### Live demo: https://mikali.netlify.app/
